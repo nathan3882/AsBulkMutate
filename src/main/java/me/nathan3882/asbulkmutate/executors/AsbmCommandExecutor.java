@@ -66,12 +66,10 @@ public class AsbmCommandExecutor implements CommandExecutor {
                     percentageIncreasePerConfigurationSection = Integer.parseInt(args[3]);
                 } catch (NumberFormatException e) {
                     sender.sendMessage(args[3] + " is not an integer value.");
-
                     return true;
                 }
 
                 YamlConfiguration config = YamlConfiguration.loadConfiguration(new File(AUTOSELL_CONFIGURATION_PATH));
-
                 if (!config.isConfigurationSection("shops")) {
                     sender.sendMessage("Your AutoSell config doesn't have a shops section. Please fix!");
                     return true;
@@ -84,9 +82,7 @@ public class AsbmCommandExecutor implements CommandExecutor {
 
                     Collection<String> items = config.getStringList(shopListPath);
                     if (items.contains(materialName)) {
-                        sender.sendMessage(String.format("Update for %s. It already contains a mapping for %s. Skipping!",
-                                                         shopIdentifier,
-                                                         materialName));
+                        sender.sendMessage(String.format("Update for %s. It already contains a mapping for %s. Skipping!", shopIdentifier, materialName));
                         continue; // go to next shop
                     }
                     // Doesn't contain this item already. Add it at our new price
