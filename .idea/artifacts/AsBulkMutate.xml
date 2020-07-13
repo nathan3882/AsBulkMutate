@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="AsBulkMutate">
+    <output-path>$PROJECT_DIR$/../../../../MineChill v2/server/plugins</output-path>
+    <root id="archive" name="AsBulkMutate.jar">
+      <element id="module-output" name="AsBulkMutate" />
+    </root>
+  </artifact>
+</component>

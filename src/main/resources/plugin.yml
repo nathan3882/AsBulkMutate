@@ -1,0 +1,8 @@
+name: AsBulkMutate
+version: "1.0"
+main: me.nathan3882.asbulkmutate.AsBulkMutate
+api-version: "1.14"
+commands:
+  asbm:
+    usage: /<command>
+    description: Core command. Use with help as first argument for usage help
