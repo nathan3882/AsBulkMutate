@@ -1,4 +1,4 @@
-package me.nathan3882.executors;
+package me.nathan3882.asbulkmutate.executors;
 
 import java.io.File;
 import java.io.IOException;
@@ -98,6 +98,7 @@ public class AsbmCommandExecutor implements CommandExecutor {
                     config.set(shopListPath, items);
 
                     sender.sendMessage(String.format("New price for shop \"%s\"'s %s is %s.", shopIdentifier, materialName, newPrice));
+                    done++;
                 }
                 saveAutosellConfiguration(config);
 
